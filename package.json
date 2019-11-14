@@ -4,6 +4,7 @@
   "description": "discord bot",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build-ts",
     "watch-ts": "tsc -w",
     "build-ts": "tsc",
     "debug-brk": "nodemon --inspect-brk dist/index.js",

@@ -35,10 +35,10 @@ client.on('message', msg => {
         return;
     }
 
-    const helpString = 'I support these commands\n\n **!google** [query] \n\n **!recent** ?[query] \n\n **!help** \n\n **kill** [name]';
+    const helpString = 'I support these commands\n\n **!google** [query] \n\n **!recent** ?[query] \n\n **!help** \n\n **!kill** [name]';
 
     if (msg.content.startsWith('!help')) {
-        msg.reply('\n\n I am Ryuk get ready for fun.' +  helpString);
+        msg.reply('\n\n I am Ryuk get ready for fun. \n\n' +  helpString);
         return;
     }
 
