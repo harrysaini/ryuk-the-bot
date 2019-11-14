@@ -1,7 +1,8 @@
 import flatCache, {Cache} from 'flat-cache';
 import path from 'path';
 
-const cachePath = path.resolve('../../cache');
+const cachePath = path.join( __dirname, '../../cache/');
+console.log(cachePath);
 
 class CacheWrapper {
 
