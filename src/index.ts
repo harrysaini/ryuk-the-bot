@@ -21,7 +21,7 @@ client.on('message', msg => {
         return;
     }
 
-    if (['Hi', 'hi', 'Hey', 'Hii', 'hii'].indexOf(msg.content) >= 0) {
+    if (['Hi', 'hi', 'Hey', 'Hii', 'hii', 'hey'].indexOf(msg.content) >= 0) {
         if (msg.author.username !== BOT_NAME) {
             msg.reply('Hey');
         }
@@ -52,7 +52,7 @@ client.on('message', msg => {
     }
 
     if (msg.author.username !== BOT_NAME) {
-        msg.channel.send(helpString);
+        msg.channel.send('Sorry could not understand! \n\n\n' + helpString);
     }
 
 });
