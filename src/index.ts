@@ -3,6 +3,7 @@ import { Client, RichEmbed } from 'discord.js';
 import  { googleSearch } from './modules/googleSearch';
 import { recentSearches } from './modules/getRecentSearches';
 const client = new Client()
+const BOT_NAME = 'ryuk-node-bot';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
@@ -20,8 +21,10 @@ client.on('message', msg => {
         return;
     }
 
-    if (['Hi', 'hi', 'Hey', 'Hii'].indexOf(msg.content) >= 0) {
-        msg.reply('Hey');
+    if (['Hi', 'hi', 'Hey', 'Hii', 'hii'].indexOf(msg.content) >= 0) {
+        if (msg.author.username !== BOT_NAME) {
+            msg.reply('Hey');
+        }
         return;
     }
 
@@ -48,7 +51,7 @@ client.on('message', msg => {
         return;
     }
 
-    if (msg.author.username !== 'ryuk-node-bot') {
+    if (msg.author.username !== BOT_NAME) {
         msg.channel.send(helpString);
     }
 
