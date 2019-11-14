@@ -1,0 +1,28 @@
+{
+  "name": "ryuk-the-bot",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "build-ts": "tsc",
+    "debug-brk": "nodemon --inspect-brk dist/index.js",
+    "debug": "nodemon --inspect dist/index.js",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harish",
+  "license": "ISC",
+  "dependencies": {
+    "@types/flat-cache": "^2.0.0",
+    "axios": "^0.19.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "flat-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^12.12.7",
+    "typescript": "^3.7.2"
+  }
+}
